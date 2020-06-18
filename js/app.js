@@ -64,6 +64,10 @@
       origin: 'right',
       delay: 50
     });
+    sr.reveal('.form-class', {
+      duration: 1700,
+      delay: 50
+    });
     sr.reveal('.bg-footer', {
       duration: 1700,
       delay: 50
