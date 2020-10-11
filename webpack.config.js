@@ -7,7 +7,8 @@ module.exports = {
     new CopyPlugin({
       patterns: assetMap.map(item =>{
         	return {
-        			from: path.resolve(__dirname, `${item}`)
+        			from: path.resolve(__dirname, `${item}`),
+        			
         	}
         })
       
