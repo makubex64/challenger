@@ -10,12 +10,6 @@
 // });
 
 // shrink navbar on scroll
-// window.onscroll = function() {
-//     var scrollTop = $(window).scrollTop();
-//     var navTop = document.querySelector('.navTop')
-//     navTop.innerHTML = 'el escroll es:' + scrollTop
-// };
-
 var menu = document.querySelector('#menu');
 var MenuTop = menu.offsetTop;
 
@@ -23,12 +17,19 @@ var myFunction = function(){
     var scrollTop = $(window).scrollTop();
 
     if(scrollTop > 100){
-        menu.style.padding = "22px"        
+        menu.style.padding = "22px"
+        menu.className += " bg-dark"        
     }else{
          menu.style.padding = ""
+         menu.classList.remove("bg-dark")
     }
 }
 window.onscroll = function(){myFunction()};
+
+// closes menu responsive when is clicked with jquery
+$(".js-scroll-trigger").click(function(){
+    $(".collapse").collapse("hide")
+})
 
 
  
