@@ -10,12 +10,19 @@
 // });
 
 // shrink navbar on scroll
+// window.onscroll = function() {
+//     var scrollTop = $(window).scrollTop();
+//     var navTop = document.querySelector('.navTop')
+//     navTop.innerHTML = 'el escroll es:' + scrollTop
+// }
+
+// shrink navbar on scroll
 var menu = document.querySelector('#menu');
 var MenuTop = menu.offsetTop;
 
 var myFunction = function(){
-    var scrollTop = $(window).scrollTop();
 
+    var scrollTop = $(window).scrollTop();
     if(scrollTop > 100){
         menu.style.padding = "22px"
         menu.className += " bg-dark"        
@@ -26,14 +33,14 @@ var myFunction = function(){
 }
 window.onscroll = function(){myFunction()};
 
+
 // closes menu responsive when is clicked with jquery
 $(".js-scroll-trigger").click(function(){
     $(".collapse").collapse("hide")
 })
 
 
- 
-// edit size image of carrusel
+ // edit size image of carrusel
  var pro = function(){
 	const image = document.querySelectorAll('.carousel-item img');
 	image.forEach(item=>{

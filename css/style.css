@@ -1,6 +1,5 @@
 #menu{
   transition: 0.4s;
-  /*overflow: hidden;*/
   min-height: 3.5rem;
 }
 .fixed-top {
@@ -16,10 +15,15 @@
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: red;
+    background-color: transparent;
     transition: background-color 0.3s ease-in-out;
+  }
 }
 
+@media only screen and (max-width: 757px){
+  #menu{
+    background-color: #343a40!important;
+  }
 }
 
 
