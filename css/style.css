@@ -26,6 +26,12 @@
   }
 }
 
+.section{
+  height: 500px;
+  padding-top: 4.5rem;
+}
+
+
 
 
 .collapse ul li a:hover{

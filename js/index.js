@@ -9,6 +9,30 @@
 //     });
 // });
 
+// Smooth scrolling using jQuery easing
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+        if (
+            location.pathname.replace(/^\//, "") ==
+                this.pathname.replace(/^\//, "") &&
+            location.hostname == this.hostname
+        ) {
+            var target = $(this.hash);
+            target = target.length
+                ? target
+                : $("[name=" + this.hash.slice(1) + "]");
+            if (target.length) {
+                $("html, body").animate(
+                    {
+                        scrollTop: target.offset().top - 70,
+                    },
+                    1000,
+                    "easeInOutExpo"
+                );
+                return false;
+            }
+        }
+    });
+
 // shrink navbar on scroll
 // window.onscroll = function() {
 //     var scrollTop = $(window).scrollTop();
@@ -16,29 +40,6 @@
 //     navTop.innerHTML = 'el escroll es:' + scrollTop
 // }
 
-$('body').scrollspy({target: ".navbar", offset: 50});   
-
-  // Add smooth scrolling on all links inside the navbar
-  $("#myNavbar a").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    }  // End if
-  });
 
 // shrink navbar on scroll
 var menu = document.querySelector('#menu');
@@ -48,7 +49,7 @@ var myFunction = function(){
 
     var scrollTop = $(window).scrollTop();
     if(scrollTop > 100){
-        menu.style.padding = "22px"
+        menu.style.padding = "18px"
         menu.className += " bg-dark"        
     }else{
          menu.style.padding = ""
