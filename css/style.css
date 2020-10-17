@@ -20,7 +20,7 @@
   }
 }
 
-@media only screen and (max-width: 757px){
+@media only screen and (max-width: 767px){
   #menu{
     background-color: #343a40!important;
   }
@@ -28,6 +28,18 @@
 
 .section{
   padding-top: 4.5rem;
+}
+.vertical{
+  border:         none;
+  border-left:    1px solid hsla(100, 10%, 60%,100);
+  height:         140vh;
+  width:          0; 
+}
+
+@media only screen and (max-width: 991px){
+  .vertical{
+    display: none;
+  }
 }
 
 

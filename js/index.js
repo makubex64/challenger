@@ -34,11 +34,19 @@ var myFunction = function(){
 }
 window.onscroll = function(){myFunction()};
 
+// add class sidebar
+const enlace = document.querySelectorAll(".enlace ul .list-group-item")
+enlace.forEach(item =>{
+    item.className += " bg-light text-dark"
+})
+
+
 
 // closes menu responsive when is clicked with jquery
 $(".js-scroll-trigger").click(function(){
-    $(".collapse").collapse("hide")
-})
+    console.log('click')
+    $(".collapse").collapse("hide");
+});
 
 
  // edit size image of carrusel
